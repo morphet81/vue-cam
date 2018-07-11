@@ -1,21 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <cam></cam>
+    <vc-cam></vc-cam>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Cam from './components/Cam.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld,
-    Cam
-  }
+  name: 'app'
 }
 </script>
 
