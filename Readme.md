@@ -32,6 +32,18 @@ Then put the ```vc-cam``` component wherever you need
 <vc-cam></vc-cam>
 ```
 
+You can make snapshots using the ```snapshot``` method of the component. The method will return a base64 string.
+
+First, give a reference to the component
+```html
+<vc-cam ref="camera"></vc-cam>
+```
+
+Then where you need it
+```javascript
+let snapBase64 = this.$refs.snapshot()
+```
+
 ## Attributes
 
 |Attribute   |Role                                                                                                                                   |Default    |
