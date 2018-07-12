@@ -1,6 +1,6 @@
 <template>
   <div>
-      <video ref="video" class="_vc-video vc-video" :style="videoStyle" :width="width" :height="height" webkit-playsinline></video>
+      <video ref="video" class="_vc-video vc-video" :style="videoStyle" :width="width" :height="height" v-show="false" webkit-playsinline></video>
       <canvas ref="canvas" :width="width" :height="height" v-show="false"></canvas>
   </div>
 </template>
