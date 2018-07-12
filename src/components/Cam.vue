@@ -1,6 +1,6 @@
 <template>
   <div>
-      <video ref="video" class="_vc-video vc-video" :style="videoStyle" :width="width" :height="height" autoplay></video>
+      <video ref="video" class="_vc-video vc-video" :style="videoStyle" :width="width" :height="height"></video>
       <canvas ref="canvas" :width="width" :height="height" v-show="false"></canvas>
   </div>
 </template>
@@ -94,10 +94,14 @@ export default {
 
     // Get permission to use the camera
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia ({
-          video: true
-        }
-      )
+      navigator.mediaDevices.getUserMedia ({ 
+        video: {
+					facingMode: { 
+            ideal: 'environment' 
+          }
+				}, 
+        audio: false 
+      })
       .then (stream => {
         video.srcObject = stream
         video.play()
