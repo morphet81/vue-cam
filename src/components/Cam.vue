@@ -6,11 +6,14 @@
 </template>
 
 <script>
-/*eslint-disable*/
 
 export default {
   name: 'Cam',
   props: {
+    autoplay: {
+      type: Boolean,
+      default: true
+    },
     width: {
       type: Number,
       default: 640
@@ -102,10 +105,13 @@ export default {
       })
       .then (stream => {
         video.srcObject = stream
-        // video.play()
+
+        if (this.autoplay) {
+          video.play()
+        }
       })
       .catch (error => {
-        console.error(error)
+        throw new Error(error);
       })
     }
   }
