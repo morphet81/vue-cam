@@ -98,12 +98,7 @@ export default {
     // Get permission to use the camera
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia ({ 
-        video: {
-					facingMode: { 
-            ideal: 'environment' 
-          }
-				}, 
-        audio: false 
+        video: true
       })
       .then (stream => {
         video.srcObject = stream
