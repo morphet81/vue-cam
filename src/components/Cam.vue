@@ -28,6 +28,9 @@ export default {
     }
   },
   computed: {
+    video () {
+      return this.$refs.video
+    },
     videoStyle () {
       return {
         'object-fit': this.fit
@@ -103,7 +106,7 @@ export default {
         audio: false 
       })
       .then (stream => {
-        // video.srcObject = stream
+        video.srcObject = stream
         // video.play()
       })
       .catch (error => {

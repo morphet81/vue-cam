@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <button @click="startCapture">Start</button>
     <vc-cam ref="camera" :width="400" :height="400"></vc-cam>
     <button @click="snapshot">Snap My Photo</button>
     <img class="thumb" :src="photo"/>
@@ -15,6 +16,9 @@ export default {
     }
   },
   methods: {
+    startCapture () {
+      this.$refs.camera.video.play()
+    },
     snapshot () {
       this.photo = this.$refs.camera.snapshot()
       /* eslint-disable */
