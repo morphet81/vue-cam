@@ -41,7 +41,7 @@ First, give a reference to the component
 
 Then where you need it
 ```javascript
-let snapBase64 = this.$refs.snapshot()
+let snapBase64 = this.$refs.camera.snapshot()
 ```
 
 ## Attributes
