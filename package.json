@@ -1,6 +1,7 @@
 {
   "name": "vue-cam",
   "version": "0.2.2",
+  "license": "MIT",
   "main": "./dist/vue-cam.common.js",
   "files": [
     "dist/*",
