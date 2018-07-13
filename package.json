@@ -2,6 +2,7 @@
   "name": "vue-cam",
   "version": "0.2.3",
   "license": "MIT",
+  "keywords": ["vue", "camera", "photo", "snapshot"],
   "main": "./dist/vue-cam.common.js",
   "files": [
     "dist/*",
